@@ -28,7 +28,7 @@ retry_config = types.HttpRetryOptions(
 )
 
 # Define the root agent
-root_agent = LlmAgent(
+language_learning_news_summary_agent = LlmAgent(
     model=Gemini(model="gemini-2.5-flash", retry_options=retry_config),
     name="LanguageLearningNewsSummaryRootAgent",
     description="A helpful assistant of language learning for user to provide latest trending news.",
@@ -70,7 +70,7 @@ async def main():
     # Create runner for the root agent
     # The runner manages the agent execution and session state
     runner = Runner(
-        agent=root_agent, app_name=APP_NAME, session_service=session_service
+        agent=language_learning_news_summary_agent, app_name=APP_NAME, session_service=session_service
     )
 
     # user query
