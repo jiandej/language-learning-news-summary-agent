@@ -59,7 +59,7 @@ async def main():
     sys.stdout.reconfigure(encoding='utf-8')
 
     # Use DatabaseSessionService for persistent sessions
-    db_url = "sqlite:///my_agent_data.db"  # Local SQLite file
+    db_url = "sqlite:///language_learning_new_summary_agent_data.db"  # Local SQLite file
     session_service = DatabaseSessionService(db_url=db_url)
 
     # Create a session with unique session ID
