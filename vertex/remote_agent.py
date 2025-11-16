@@ -33,7 +33,7 @@ async def conversation(user_query: str, remote_agent):
         message=user_query,
         user_id=USER_ID,
     ):
-        if 'content' in item and 'parts' in item['content'] and len(item['content']['parts']) != 0:
+        if 'content' in item and 'parts' in item['content'] and len(item['content']['parts']) != 0 and 'text' in item['content']['parts'][0]:
             print(item['content']['parts'][0]['text'])
     print("-" * 60)
 

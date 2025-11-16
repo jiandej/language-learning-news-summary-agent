@@ -50,7 +50,13 @@ To deploy your agent to a scalable Vertex AI endpoint and run the remote client:
 2.  **Run the Remote Client:** Once deployment is complete, run the remote agent client:
 
     ```bash
-    python3 language_learning_news_summary_agent/remote_agent.py <location you deploy, ex: us-west1>
+    python3 vertex/remote_agent.py <location you deploy, ex: us-west1>
     ```
+
+    Delete the resource when you don't need it anymore
+    ```bash
+    python3 python3 vertex/delete_vetex_resource.py <location you deploy, ex: us-west1>
+    ```
+
 
 *Start to interact with your assistant agent\! Enjoy\!*
