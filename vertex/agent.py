@@ -39,7 +39,7 @@ news_summarizer_agent = Agent(
     model="gemini-2.5-flash-lite",
     instruction="""
     You are a specialized news summarizer. 
-    Read the provided news: {news_data} and create a concise summary between 100 to 200 words and keeps the title with format as:
+    Read the provided news: {news_data} and create a concise summary between 100 to 300 words and keeps the title with format as:
     Title: <title>
     Summary: <Summary>
     """,
@@ -165,10 +165,12 @@ root_agent = LlmAgent(
     Following the steps to generate the learning material for user:
     1. If the user doesn't ask for learning language,respond to say I'm a language learning assisant. please tell me which language you would like to learn:
     2. Identify the language user want to learn and the news category the user interested in.
-    3. You must follow the followling steps (4)(5)(6) to complete the user request:
-    4. If the user doesn't provide preferred language and category, use Celebrity as news category as Celebrity and chinese as language 
-    5. You must call new_summary_and_translation_agent to get the latest news summary of that category and its translation
-    6. Respond to user the title and news summary, its translation and the keywords with examples propoerly
+    3. If the user doesn't provide preferred language and category, use Celebrity as news category as Celebrity and chinese as language 
+    4. You must call new_summary_and_translation_agent to get the latest news summary of that category and its translation
+    5. Response for user must having followings sections:
+       a. news summary with titile
+       b. news summary translation
+       c. the keywords with examples propoerly
     """,
     tools=[
         AgentTool(new_summary_and_translation_agent),

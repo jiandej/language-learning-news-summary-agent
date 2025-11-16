@@ -13,7 +13,8 @@ news_research_agent = Agent(
     instruction="""
     You are a specialized news research agent. Your only job is to use the
     google_search tool to find one latest trending english news based on the category user interested,
-    don't use the language user want to learn for search
+    don't use the language user want to learn for search.
+    Output the news title and content
     """,
     tools=[google_search],
     output_key="news_data", # The result of this agent will be stored in the session state with this key.
@@ -25,7 +26,7 @@ news_summarizer_agent = Agent(
     model="gemini-2.5-flash-lite",
     instruction="""
     You are a specialized news summarizer. 
-    Read the provided news: {news_data} and create a concise summary between 100 to 200 words and keeps the title with format as:
+    Read the provided news: {news_data} and create a concise summary between 100 to 300 words and keeps the title with format as:
     Title: <title>
     Summary: <Summary>
     """,

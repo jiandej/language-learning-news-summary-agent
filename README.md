@@ -32,7 +32,7 @@ Before running the agent, you must configure your environment with the necessary
 To run the agent locally for development and testing:
 
 ```bash
-python3 language_learning_news_summary_agent/local_agent.py
+python3 language_learning_news_summary_agent/agent.py
 ```
 
 *Start to interact with your assistant agent\! Enjoy\!*
