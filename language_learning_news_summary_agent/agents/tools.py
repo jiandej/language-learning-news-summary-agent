@@ -33,6 +33,12 @@ def retrieve_userinfo(tool_context: ToolContext) -> Dict[str, Any]:
     """
     # Read from session state
     user_name = tool_context.state.get("user:name", "Username not found")
-    country = tool_context.state.get("user:country", "Country not found")
+    preferredLanguage = tool_context.state.get("user:preferredLanguage", "preferredLanguage not found")
+    interestedNewsCategory = tool_context.state.get("user:interestedNewsCategory", "interestedNewsCategory not found")
 
-    return {"status": "success", "user_name": user_name, "country": country}
+    return {
+        "status": "success",
+        "user_name": user_name,
+        "preferredLanguage": preferredLanguage,
+        "interestedNewsCategory": interestedNewsCategory
+        }

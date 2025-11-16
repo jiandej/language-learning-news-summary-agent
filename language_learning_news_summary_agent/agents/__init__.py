@@ -1,0 +1,2 @@
+PACKAGE_VERSION = "1.0.0"
+AUTHOR = "JD Jiang"

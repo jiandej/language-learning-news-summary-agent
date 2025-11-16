@@ -1,2 +1,3 @@
 google-adk
 opentelemetry-instrumentation-google-genai
+-e ./language_learning_news_summary_agent
